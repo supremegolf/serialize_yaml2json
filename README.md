@@ -31,6 +31,13 @@ Update your models to use this Coder.
       serialize :data, SerializeYAML2JSON::Coder
     end
 
+    # NOTE: 'data' will now be a hash with indifferent access.
+    # This is because JSON doesn't understand symbols and stringifies
+    # all keys.  YAML could do either.  This is necessary to support
+    # existing access to the attributes.
+
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/supremegolf/serialize_yaml2json/fork )
