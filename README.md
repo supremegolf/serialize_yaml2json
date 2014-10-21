@@ -1,5 +1,9 @@
 # SerializeYaml2json
 
+[![Gem Version](https://badge.fury.io/rb/serialize_yaml2json.png)](http://badge.fury.io/rb/serialize_yaml2json)
+[![Code Climate](https://codeclimate.com/github/supremegolf/serialize_yaml2json.png)](https://codeclimate.com/github/supremegolf/serialize_yaml2json)
+[![Build Status](https://travis-ci.org/supremegolf/serialize_yaml2json.svg?branch=master)](https://travis-ci.org/supremegolf/serialize_yaml2json)
+
 ActiveRecord::Coder to transition serialized attributes from YAML to JSON.
 
 ## Installation
