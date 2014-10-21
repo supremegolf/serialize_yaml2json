@@ -4,7 +4,16 @@
 [![Code Climate](https://codeclimate.com/github/supremegolf/serialize_yaml2json.png)](https://codeclimate.com/github/supremegolf/serialize_yaml2json)
 [![Build Status](https://travis-ci.org/supremegolf/serialize_yaml2json.svg?branch=master)](https://travis-ci.org/supremegolf/serialize_yaml2json)
 
-ActiveRecord::Coder to transition serialized attributes from YAML to JSON.
+ActiveRecord::Coder to transparently transition serialized attributes from YAML to JSON. In a recent
+test creating/reading 50,000 serialized records JSON outperfoms YAML by a wide margin.
+
+Serializing the entire contents of the `ENV` hash:
+
+                user     system      total        real
+    yaml:  77.390000   9.220000  86.610000 (117.776747)
+    json:  52.870000   8.240000  61.110000 ( 89.297786)
+
+More information available [here](http://pjkh.com/articles/postgresql-json-vs-rails-serialize/).
 
 ## Installation
 
