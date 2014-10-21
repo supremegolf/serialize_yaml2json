@@ -15,7 +15,7 @@ module SerializeYAML2JSON
       else
         obj = ::ActiveRecord::Coders::JSON.load(yaml_or_json)
       end 
-      obj.with_indifferent_access
+      obj.respond_to?(:with_indifferent_access) ? obj.with_indifferent_access : obj
     end
 
   end

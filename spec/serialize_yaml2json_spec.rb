@@ -39,4 +39,16 @@ describe SerializeYAML2JSON do
 
   end
 
+  describe "with a nil value" do
+    before do
+      subject.class.connection.update("UPDATE widgets SET data = NULL")
+      subject.reload
+    end
+
+    it "loads correctly" do
+      expect(subject.data).to eq nil
+    end
+
+  end
+
 end
