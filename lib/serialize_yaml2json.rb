@@ -11,7 +11,7 @@ module SerializeYAML2JSON
 
     def self.load(yaml_or_json)
       if yaml_or_json.is_a?(String) && yaml_or_json =~ /^---/
-        obj = ::ActiveRecord::Coders::YAMLColumn.new.load(yaml_or_json)
+        obj = ::YAML.load(yaml_or_json)
       else
         obj = ::ActiveRecord::Coders::JSON.load(yaml_or_json)
       end 
